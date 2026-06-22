@@ -9,8 +9,11 @@ st.set_page_config(
 
 @st.cache_data(ttl=600)
 def load_data():
-    df = pd.read_csv("data\superstore_clean.csv",parse_dates=['Order Date', 'Ship Date'])
+    df = pd.read_csv("data/superstore_clean.csv",parse_dates=['Order Date', 'Ship Date'])
     return df
+
+#reference
+
 
 df = load_data()
 
@@ -101,7 +104,7 @@ with tab4:
     elif mean_margin < 20:
         st.warning(f"Moderate margin :{mean_margin:.1f}% - room to improve.")
     else:
-        st.sucess(f"Healthy margin :{mean_margin:.1f}% - pricing strategy is working.")
+        st.success(f"Healthy margin :{mean_margin:.1f}% - pricing strategy is working.")
 
     st.info(f"{high_dics_n} ordrs have discount above the 75th percentile({high_disc_pct * 100:.0f}%).")
 
