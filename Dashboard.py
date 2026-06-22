@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -250,5 +249,3 @@ st.markdown("---")
 min_year= filtered["Order Year"].min()
 max_year= filtered["Order Year"].max()
 st.caption(f"showing {len(filtered):,} Rows • {min_year}–{max_year} • Built by Sahwa")
-
->>>>>>> 96a1209295501ffa12ddcda772e6e1ae0ab03f1d
